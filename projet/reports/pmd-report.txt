@@ -1,0 +1,2 @@
+src/main/java/com/activite/un/Produit.java:5:	DataClass:	DataClass: The class 'Produit' is suspected to be a Data Class (WOC=28.571%, NOPA=0, NOAM=4, WMC=8)
+src/main/java/com/activite/un/Produit.java:5:	DataClass:	DataClass: The class 'Produit' is suspected to be a Data Class (WOC=28.571%, NOPA=0, NOAM=4, WMC=8)

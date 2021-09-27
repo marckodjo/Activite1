@@ -1,0 +1,368 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>SpotBugs Report</title>
+      <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+				color: red;
+				font-weight: bold;
+		}
+		.priority-2 {
+				color: orange;
+				font-weight: bold;
+		}
+		.priority-3 {
+				color: green;
+				font-weight: bold;
+		}
+		.priority-4 {
+				color: blue;
+				font-weight: bold;
+		}
+		</style>
+      <script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+   </head>
+   <body>
+      <h1>
+         <a href="https://spotbugs.github.io/">SpotBugs</a> Report</h1>
+      <h2>Project Information</h2>
+      <p>Project: 
+		</p>
+      <p>SpotBugs version: 4.4.0</p>
+      <p>Code analyzed:</p>
+      <ul>
+         <li>Produit.class</li>
+      </ul>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Metrics</h2>
+      <p>24 lines of code analyzed,
+	in 1 classes, 
+	in 1 packages.</p>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Metric</th>
+            <th align="right">Total</th>
+            <th align="right">Density*</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>High Priority Warnings</td>
+            <td align="right">3</td>
+            <td align="right">125.00</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Medium Priority Warnings</td>
+            <td align="right">5</td>
+            <td align="right">208.33</td>
+         </tr>
+         <tr class="$totalClass">
+            <td>
+               <b>Total Warnings</b>
+            </td>
+            <td align="right">
+               <b>8</b>
+            </td>
+            <td align="right">
+               <b>333.33</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Contents</h2>
+      <ul>
+         <li>
+            <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+         </li>
+         <li>
+            <a href="#Details">Details</a>
+         </li>
+      </ul>
+      <h1>Summary</h1>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Warning Type</th>
+            <th align="right">Number</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+            </td>
+            <td align="right">3</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+            </td>
+            <td align="right">4</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+            </td>
+            <td align="right">1</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <b>Total</b>
+            </td>
+            <td align="right">
+               <b>8</b>
+            </td>
+         </tr>
+      </table>
+      <h1>Warnings</h1>
+      <p>Click on a warning row to see full context information.</p>
+      <h2>
+         <a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e4');">
+            <td>
+               <span class="priority-2">BC</span>
+            </td>
+            <td>Equals method for com.activite.un.Produit assumes the argument is of type Produit</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e4" style="display: none;">
+                  <a href="#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">Bug type BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS (click for details)</a>
+                  <br/>In class com.activite.un.Produit<br/>In method com.activite.un.Produit.equals(Object)<br/>At produit.java:[line 36]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e35');">
+            <td>
+               <span class="priority-2">ES</span>
+            </td>
+            <td>Comparaison d'objets String utilisant == ou != dans com.activite.un.Produit.equals(Object)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e35" style="display: none;">
+                  <a href="#ES_COMPARING_STRINGS_WITH_EQ">Bug type ES_COMPARING_STRINGS_WITH_EQ (click for details)</a>
+                  <br/>In class com.activite.un.Produit<br/>In method com.activite.un.Produit.equals(Object)<br/>Actual type String<br/>Value loaded from field com.activite.un.Produit.reference<br/>At produit.java:[line 36]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e69');">
+            <td>
+               <span class="priority-2">NP</span>
+            </td>
+            <td>com.activite.un.Produit.equals(Object) ne vérifie pas la nullité d'un paramètre</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e69" style="display: none;">
+                  <a href="#NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT">Bug type NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT (click for details)</a>
+                  <br/>In class com.activite.un.Produit<br/>In method com.activite.un.Produit.equals(Object)<br/>Parameter $L1<br/>At produit.java:[line 36]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_CORRECTNESS">Correctness Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e55');">
+            <td>
+               <span class="priority-1">IP</span>
+            </td>
+            <td>Un paramètre de new com.activite.un.Produit(String) est écrasé avant d'être utilisé</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e55" style="display: none;">
+                  <a href="#IP_PARAMETER_IS_DEAD_BUT_OVERWRITTEN">Bug type IP_PARAMETER_IS_DEAD_BUT_OVERWRITTEN (click for details)</a>
+                  <br/>In class com.activite.un.Produit<br/>In method new com.activite.un.Produit(String)<br/>Local variable stored in JVM register 1<br/>At produit.java:[line 13]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e83');">
+            <td>
+               <span class="priority-2">NP</span>
+            </td>
+            <td>Lecture d'un champ jamais alimenté dans com.activite.un.Produit.hashCode()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e83" style="display: none;">
+                  <a href="#NP_UNWRITTEN_FIELD">Bug type NP_UNWRITTEN_FIELD (click for details)</a>
+                  <br/>In class com.activite.un.Produit<br/>In method com.activite.un.Produit.hashCode()<br/>Field com.activite.un.Produit.reference<br/>At produit.java:[line 44]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e99');">
+            <td>
+               <span class="priority-1">UR</span>
+            </td>
+            <td>Lecture du champ com.activite.un.Produit.reference non initialisé dans new com.activite.un.Produit(String)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e99" style="display: none;">
+                  <a href="#UR_UNINIT_READ">Bug type UR_UNINIT_READ (click for details)</a>
+                  <br/>In class com.activite.un.Produit<br/>In method new com.activite.un.Produit(String)<br/>Field com.activite.un.Produit.reference<br/>Did you mean to refer to the local variable ?<br/>At produit.java:[line 13]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e117');">
+            <td>
+               <span class="priority-2">UwF</span>
+            </td>
+            <td>Champ jamais écrit : com.activite.un.Produit.reference</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e117" style="display: none;">
+                  <a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+                  <br/>In class com.activite.un.Produit<br/>Field com.activite.un.Produit.reference<br/>At produit.java:[line 13]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_STYLE">Dodgy code Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e16');">
+            <td>
+               <span class="priority-1">DLS</span>
+            </td>
+            <td>Alimentation à perte d'une variable locale dans la méthode new com.activite.un.Produit(String)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e16" style="display: none;">
+                  <a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
+                  <br/>In class com.activite.un.Produit<br/>In method new com.activite.un.Produit(String)<br/>Local variable stored in JVM register 1<br/>At produit.java:[line 13]</p>
+            </td>
+         </tr>
+      </table>
+      <h1>
+         <a name="Details">Details</a>
+      </h1>
+      <h2>
+         <a name="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS: Equals method should not assume anything about the type of its argument</a>
+      </h2>
+
+<p>
+The <code>equals(Object o)</code> method shouldn't make any assumptions
+about the type of <code>o</code>. It should simply return
+false if <code>o</code> is not the same type as <code>this</code>.
+</p>
+
+    <h2>
+         <a name="DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE: Alimentation à perte d'une variable locale</a>
+      </h2>
+
+<p>Cette instruction assigne une valeur à une variable locale mais cette variable n'est pas lue par la suite. Ceci indique souvent une erreur puisque la valeur calculée n'est jamais utilisée.</p>
+<p>Notez que le compilateur javac de Sun génère fréquemment ce genre d'affectations à perte. FindBugs analysant le byte-code généré, il n'y a pas de façon simple d'éliminer ces fausses alarmes.</p>
+
+  <h2>
+         <a name="ES_COMPARING_STRINGS_WITH_EQ">ES_COMPARING_STRINGS_WITH_EQ: Comparaison d'objets String utilisant == ou !=</a>
+      </h2>
+
+<p>Ce code compare des objets <code>java.lang.String</code> au moyen de l'égalité par référence des opérateurs <code>==</code> ou <code>!=</code>. A moins que les deux chaînes ne soient des constantes dans le fichier source ou aient été internalisées au moyen de la méthode <code>String.intern()</code>, deux chaînes identiques peuvent être représentées par deux objets <code>String</code> différents. Envisagez d'utiliser la méthode <code>equals(Object)</code> à la place.</p>
+
+  <h2>
+         <a name="IP_PARAMETER_IS_DEAD_BUT_OVERWRITTEN">IP_PARAMETER_IS_DEAD_BUT_OVERWRITTEN: Un paramètre est ré-écrit avant d'être utilisé</a>
+      </h2>
+
+<p>La valeur initiale de ce paramètre est ignorée, et le paramètre est écrasé. Ceci indique généralement une erreur provenant de la croyance infondée qu'une écriture sur ce paramètre sera transmise à l'appelant.</p>
+
+  <h2>
+         <a name="NP_UNWRITTEN_FIELD">NP_UNWRITTEN_FIELD: Lecture d'un champ jamais écrit</a>
+      </h2>
+
+<p>Le programme déréférence un champ qui ne semble jamais alimenté par une valeur non nulle. Déréférencer cette valeur provoquera une <code>NullPointerException</code>.</p>
+
+  <h2>
+         <a name="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT">NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT: Méthode equals() ne vérifiant pas la nullité</a>
+      </h2>
+
+<p>Cette implémentation de <code>equals(Object)</code> ne respecte pas le contrat défini par <code>java.lang.Object.equals()</code> car elle ne vérifie la nullité du paramètre reçu en argument. Toutes les méthodes <code>equals()</code> doivent renvoyer <code>false</code> quand elles reçoivent une valeur à <code>null</code>.</p>
+
+  <h2>
+         <a name="UR_UNINIT_READ">UR_UNINIT_READ: Lecture d'un champ non initialisé dans un constructeur</a>
+      </h2>
+
+<p>Ce constructeur lit un champ qui n'a pas encore été initialisé. Une des causes les plus fréquentes est l'utilisation accidentelle par le développeur du champ au lieu d'un des paramètres du constructeur.</p>
+
+  <h2>
+         <a name="UWF_UNWRITTEN_FIELD">UWF_UNWRITTEN_FIELD: Champ jamais écrit</a>
+      </h2>
+
+<p>Ce champ n'est jamais alimenté. Toutes les lectures vont renvoyer sa valeur par défaut. Recherchez les erreurs (devrait-il avoir été initialisé ?) ou supprimez le s'il est inutile.</p>
+
+  </body>
+</html>
